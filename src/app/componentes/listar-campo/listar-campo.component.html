@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="card-header">
+        Campos
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Direccion</th>
+                    <th>Tipo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let campo of Campos; let iControl = index">
+                    <td>{{campo.ID_CAMPO}}</td>
+                    <td>{{campo.NOMBRE}}</td>
+                    <td>{{campo.DIRECCION}}</td>
+                    <td>{{campo.TIPO}}</td>
+                    <td>
+                        <button class="btn btn-secondary" routerLink="/editar-campo/{{campo.ID_CAMPO}}">Editar</button>
+                        
+                         <a class="btn btn-danger" (click)="borrarRegistro(campo.ID_CAMPO,iControl)"  role="button">ELIMINAR</a>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+    </div>
+   
+</div>

@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-header">
+        Agregar Campo
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="formularioCampos" (ngSubmit)="enviarDatos()">
+
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre</label>
+              <input required type="text" formControlName="nombre" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre del campo">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Direccion del campo</label>
+                <input required type="text" formControlName="direccion" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Direccion">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Tipo</label>
+                <input required type="text" formControlName="tipo" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Tipo del campo">
+              </div>
+
+
+              <div class="btn-group" role="group" aria-label="">
+                  <button type="submit" class="btn btn-success">Agregar</button>
+                  <button type="button" routerLink="/listar-campos" class="btn btn-danger">Cancelar</button>
+              </div>
+        </form>
+    </div>
+    
+</div>

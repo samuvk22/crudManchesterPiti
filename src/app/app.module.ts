@@ -4,13 +4,34 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
+import { AgregarCampoComponent } from './componentes/agregar-campo/agregar-campo.component';
+import { EditarCampoComponent } from './componentes/editar-campo/editar-campo.component';
+import { ListarCampoComponent } from './componentes/listar-campo/listar-campo.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+import {HttpClientModule} from '@angular/common/http';
+import { InicioComponent } from './componentes/inicio/inicio.component';
+import { PieComponent } from './componentes/pie/pie.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AgregarCampoComponent,
+    EditarCampoComponent,
+    ListarCampoComponent,
+    InicioComponent,
+    PieComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
