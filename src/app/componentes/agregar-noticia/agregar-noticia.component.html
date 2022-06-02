@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header">
+        Publicar noticia
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="formularioNoticias" (ngSubmit)="enviarDatos()">
+
+            <div class="mb-3">
+              <label for="" class="form-label">Titulo</label>
+              <input required type="text" formControlName="titulo" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Titulo de la noticia">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Descripcion de la noticia</label>
+                <input required type="text-area" formControlName="descripcion" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Descripcion de la noticia">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Usuario</label>
+                <input required type="text" formControlName="usuario" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Usuario">
+              </div>
+
+
+              <div class="btn-group" role="group" aria-label="">
+                  <button type="submit" class="btn btn-success">Publicar</button>
+                  <button type="button" routerLink="/listar-noticias" class="btn btn-danger">Cancelar</button>
+              </div>
+        </form>
+    </div>
+    
+</div>
+

@@ -15,6 +15,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { PieComponent } from './componentes/pie/pie.component';
+import { ListarPlantillaComponent } from './componentes/listar-plantilla/listar-plantilla.component';
+import { ContactoComponent } from './componentes/contacto/contacto.component';
+import { ListarNoticiasComponent } from './componentes/listar-noticias/listar-noticias.component';
+import { AgregarNoticiaComponent } from './componentes/agregar-noticia/agregar-noticia.component';
+import { EditarNoticiaComponent } from './componentes/editar-noticia/editar-noticia.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { PieComponent } from './componentes/pie/pie.component';
     EditarCampoComponent,
     ListarCampoComponent,
     InicioComponent,
-    PieComponent
+    PieComponent,
+    ListarPlantillaComponent,
+    ContactoComponent,
+    ListarNoticiasComponent,
+    AgregarNoticiaComponent,
+    EditarNoticiaComponent
   ],
   imports: [
     BrowserModule,
