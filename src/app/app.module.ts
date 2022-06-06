@@ -21,6 +21,7 @@ import { ListarNoticiasComponent } from './componentes/listar-noticias/listar-no
 import { AgregarNoticiaComponent } from './componentes/agregar-noticia/agregar-noticia.component';
 import { EditarNoticiaComponent } from './componentes/editar-noticia/editar-noticia.component';
 import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion.component';
+import { EditarPlantillaComponent } from './componentes/editar-plantilla/editar-plantilla.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion
     ListarNoticiasComponent,
     AgregarNoticiaComponent,
     EditarNoticiaComponent,
-    InicioSesionComponent
+    InicioSesionComponent,
+    EditarPlantillaComponent
   ],
   imports: [
     BrowserModule,
