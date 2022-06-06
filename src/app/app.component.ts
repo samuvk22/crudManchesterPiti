@@ -25,6 +25,7 @@ export class AppComponent {
     
 
 
+      
     
       const ini = document.getElementById("ini");
       const noini = document.getElementById("noini");
@@ -43,7 +44,7 @@ export class AppComponent {
           noini.style.display = "display";
   
         }
-  
+       // window.location.reload();
     }else{
 
       if(noini != null){
@@ -59,6 +60,7 @@ export class AppComponent {
 
     sessionStorage.clear();
     this.ruteador.navigateByUrl("/iniciarSesion");
+    //window.location.reload();
 
   }
 }
