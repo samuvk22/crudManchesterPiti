@@ -10,4 +10,6 @@ export class AppComponent {
 
 
   mostrar:boolean = false;
+
+  sesion:any = sessionStorage.getItem("sesion");
 }

@@ -31,7 +31,7 @@
 
         <div class="row">
             <div class="col-6">
-                <div class="card m-5" style="max-width: 540px;">
+                <div class="card m-5" style="max-width: 540px;" *ngFor="let noticia of NoticiaUltima; let iControl = index">
                     <div class="card-header d-flex justify-content-between">
                         Ultimas Noticias
                         <button class="btn btn-sm" routerLink="/listar-noticias">  
@@ -46,16 +46,23 @@
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Titulo de la noticia</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <h5 class="card-title">{{noticia.TITULO}}</h5>
+                          <p class="card-text">{{noticia.DESCRIPCION}}</p>
                          
                         </div>
+                        <div class="card-footer d-flex justify-content-end">
+                          <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                          </svg>
+                          <div class="ms-1">{{noticia.USUARIO}}</div>
+                      </div>
                       </div>
                     </div>
                 </div>
             </div>
             <div class="col-6">
-                <div class="card m-5" style="max-width: 540px; max-height: 500px;">
+                <div class="card m-5" style="max-width: 540px; max-height: 500px;" *ngFor="let campo of CampoUltimo; let iControl = index">
                     <div class="card-header d-flex justify-content-between">
                         Reserva de campos
                         <button class="btn btn-sm" routerLink="/listar-campos">  
@@ -70,8 +77,9 @@
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Nombre del Campo</h5>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <h5 class="card-title">{{campo.NOMBRE}}</h5>
+                          <p class="card-text">{{campo.DIRECCION}}</p>
+                          <p class="card-text">{{campo.TIPO}}</p>
                          
                         </div>
                       </div>
