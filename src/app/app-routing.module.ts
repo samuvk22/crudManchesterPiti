@@ -9,6 +9,7 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { AgregarNoticiaComponent } from './componentes/agregar-noticia/agregar-noticia.component';
 import { ListarNoticiasComponent } from './componentes/listar-noticias/listar-noticias.component';
 import { EditarNoticiaComponent } from './componentes/editar-noticia/editar-noticia.component';
+import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion.component';
 
 const routes: Routes = [
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'agregar-noticia', component: AgregarNoticiaComponent},
   {path: 'editar-noticia/:id', component: EditarNoticiaComponent},
   {path: 'listar-plantilla', component: ListarPlantillaComponent},
+  {path: 'iniciarSesion', component: InicioSesionComponent},
   {path: 'contacto', component: ContactoComponent},
   {path: '', component:InicioComponent},  //no se pone ninguna ruta
   {path: '**', redirectTo:'/' }
