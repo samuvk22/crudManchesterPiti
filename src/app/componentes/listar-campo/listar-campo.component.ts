@@ -24,6 +24,21 @@ export class ListarCampoComponent implements OnInit {
 
       this.Campos=respuesta;
     });
+
+    let admin = document.querySelectorAll("admin");
+    //const admin = document.querySelectorAll("#admin");
+
+
+    if(sessionStorage.getItem("sesion") == "OK" && sessionStorage.getItem("rol") == "admin"){
+
+
+     for(var i = 0; i < admin.length; i++){
+      //admin[i].style.display = "block";
+      console.log("cambiando propiedad");
+     }
+
+
+    }
   }
 
   borrarRegistro(id:any,iControl:any){

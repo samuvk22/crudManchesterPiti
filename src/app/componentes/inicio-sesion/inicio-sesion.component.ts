@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormBuilder } from '@angular/forms';
 
-import { CamposServiceService } from 'src/app/servicios/campos-service.service';
+
 
 import { Router } from '@angular/router';
 import { InicioSesionService } from 'src/app/servicios/inicio-sesion.service';
@@ -35,6 +35,13 @@ export class InicioSesionComponent implements OnInit {
   
 
   ngOnInit(): void {
+
+
+    if(sessionStorage.getItem("sesion") == "OK"){
+
+      this.ruteador.navigateByUrl("/inicio");
+
+    }
   }
 
   enviarDatos():any{
@@ -69,9 +76,11 @@ export class InicioSesionComponent implements OnInit {
       sessionStorage.setItem("sesion","OK");
       sessionStorage.setItem("usuario",this.formularioUsuarios.value.usuario);
       sessionStorage.setItem("rol",rol);
-      this.ruteador.navigateByUrl('/inicio');
+      window.location.href = "http://localhost:4200/";
+      //this.ruteador.navigateByUrl('/inicio');
      }else{
-      this.ruteador.navigateByUrl('/iniciarSesion');
+      window.location.href = "http://localhost:4200/iniciarSesion";
+      //this.ruteador.navigateByUrl('/iniciarSesion');
      }
 
       

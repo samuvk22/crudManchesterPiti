@@ -28,10 +28,11 @@ export class AppComponent {
       
     
       const ini = document.getElementById("ini");
+      //ini.innerHTML = "hola";
       const noini = document.getElementById("noini");
   
   
-      if(sessionStorage.getItem("sesion") == "OK"){
+      if(sessionStorage.getItem("sesion") == "OK" ){
   
   
         if(ini != null){
@@ -41,7 +42,7 @@ export class AppComponent {
   
   
         if(noini != null){
-          noini.style.display = "display";
+          noini.style.display = "none";
   
         }
        // window.location.reload();
@@ -59,7 +60,7 @@ export class AppComponent {
 
 
     sessionStorage.clear();
-    this.ruteador.navigateByUrl("/iniciarSesion");
+    window.location.href = "http://localhost:4200/iniciarSesion";
     //window.location.reload();
 
   }
