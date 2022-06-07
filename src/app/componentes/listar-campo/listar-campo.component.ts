@@ -25,7 +25,11 @@ export class ListarCampoComponent implements OnInit {
       this.Campos=respuesta;
     });
 
-    let admin = document.querySelectorAll("admin");
+     const admin = document.getElementsByClassName("admin");
+    
+
+     
+    /* let admin = document.querySelectorAll("admin");
     //const admin = document.querySelectorAll("#admin");
 
 
@@ -33,12 +37,19 @@ export class ListarCampoComponent implements OnInit {
 
 
      for(var i = 0; i < admin.length; i++){
-      //admin[i].style.display = "block";
+      admin[i].classList.add('ve');
       console.log("cambiando propiedad");
      }
 
 
-    }
+    }else{
+
+      for(var i = 0; i < admin.length; i++){
+        admin[i].classList.add('nove');
+        console.log("cambiando propiedad");
+       }
+
+    } */
   }
 
   borrarRegistro(id:any,iControl:any){

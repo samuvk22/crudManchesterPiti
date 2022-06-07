@@ -31,9 +31,9 @@
                     Reservar
                 </button>
                 <br>
-                <button style="display: none;" id="admin" class="btn btn-secondary mt-2 mx-2" routerLink="/editar-campo/{{campo.ID_CAMPO}}">Editar</button>
+                <button  id="admin" class="admim btn btn-secondary mt-2 mx-2" routerLink="/editar-campo/{{campo.ID_CAMPO}}">Editar</button>
                     
-                <a   style="display: none;" id="admin" class="btn btn-danger mt-2 mx-2" (click)="borrarRegistro(campo.ID_CAMPO,iControl)"  role="button">ELIMINAR</a>
+                <a   id="admin" class="admin btn btn-danger mt-2 mx-2" (click)="borrarRegistro(campo.ID_CAMPO,iControl)"  role="button">ELIMINAR</a>
             </div>
         </div>
 
