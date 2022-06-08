@@ -14,10 +14,10 @@ export class PlantillaService {
 
   AgregarJugador(datosPlantilla:Plantilla):Observable<any>{
   return this.clienteHttp.post(this.API+"?insertar=1", datosPlantilla);
-}
+  }
 
-ObtenerJugador(){
-  return this.clienteHttp.get(this.API);
-}
+  ObtenerJugador(){
+    return this.clienteHttp.get(this.API);
+  }
 
 }

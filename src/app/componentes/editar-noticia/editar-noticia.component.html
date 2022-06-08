@@ -1,1 +1,31 @@
-<p>editar-noticia works!</p>
+<div class="card">
+    <div class="card-header">
+        Editar Campo
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="formularioNoticias" (ngSubmit)="enviarDatos()">
+
+            <div class="mb-3">
+              <label for="" class="form-label">Titulo</label>
+              <input type="text" formControlName="titulo" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre del campo">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Descripcion</label>
+                <input type="text" formControlName="descripcion" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Direccion">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Usuario</label>
+                <input type="text" formControlName="usuario" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Tipo del campo">
+              </div>
+
+
+              <div class="btn-group" role="group" aria-label="">
+                  <button type="submit" class="btn btn-success">Editar</button>
+                  <button type="button" routerLink="/listar-noticias" class="btn btn-danger">Cancelar</button>
+              </div>
+        </form>
+    </div>
+    
+</div>

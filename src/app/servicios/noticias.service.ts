@@ -23,6 +23,12 @@ export class NoticiasService {
     return this.clienteHttp.post(this.API + "?insertar=1", datosNoticia);
   }
 
+  ObtenerNoticia(id:any):Observable<any>{
+
+
+    return this.clienteHttp.get(this.API + "?consultar="+ id);
+  }
+
 
   ObtenerNoticias(){
 
@@ -34,6 +40,13 @@ export class NoticiasService {
 
 
     return this.clienteHttp.get(this.API + "?borrar="+ id);
+  }
+
+
+  EditarNoticia(id:any,datosNoticia:Noticia):Observable<any>{
+
+
+    return this.clienteHttp.post(this.API + "?actualizar=" + id, datosNoticia);
   }
 
 
