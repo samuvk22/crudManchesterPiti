@@ -11,6 +11,7 @@ import { ListarNoticiasComponent } from './componentes/listar-noticias/listar-no
 import { EditarNoticiaComponent } from './componentes/editar-noticia/editar-noticia.component';
 import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion.component';
 import { UnirmeComponent } from './componentes/unirme/unirme.component';
+import { ReservarCampoComponent } from './componentes/reservar-campo/reservar-campo.component';
 
 const routes: Routes = [
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'agregar-campo', component: AgregarCampoComponent},
   {path: 'unirme', component: UnirmeComponent},
   {path: 'editar-campo/:id', component: EditarCampoComponent},
+  {path: 'reservar-campo/:id', component: ReservarCampoComponent},
   {path: 'listar-noticias', component: ListarNoticiasComponent},
   {path: 'agregar-noticia', component: AgregarNoticiaComponent},
   {path: 'editar-noticia/:id', component: EditarNoticiaComponent},

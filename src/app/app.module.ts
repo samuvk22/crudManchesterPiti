@@ -23,6 +23,7 @@ import { EditarNoticiaComponent } from './componentes/editar-noticia/editar-noti
 import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion.component';
 import { EditarPlantillaComponent } from './componentes/editar-plantilla/editar-plantilla.component';
 import { UnirmeComponent } from './componentes/unirme/unirme.component';
+import { ReservarCampoComponent } from './componentes/reservar-campo/reservar-campo.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { UnirmeComponent } from './componentes/unirme/unirme.component';
     EditarNoticiaComponent,
     InicioSesionComponent,
     EditarPlantillaComponent,
-    UnirmeComponent
+    UnirmeComponent,
+    ReservarCampoComponent
   ],
   imports: [
     BrowserModule,

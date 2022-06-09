@@ -31,11 +31,11 @@ export class AgregarNoticiaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if( sessionStorage.getItem("rol") != 'admin'){
+    /* if( sessionStorage.getItem("rol") != 'admin'){
 
       console.log("no eres admin");
       this.ruteador.navigateByUrl("/iniciarSesion");
-    }
+    } */
   }
 
   enviarDatos():any{
