@@ -3,7 +3,7 @@
         Reservar Campo
     </div>
     <div class="card-body">
-        <form ngNativeValidate>
+        <form ngNativeValidate [formGroup]="formularioReserva" (ngSubmit)="enviarDatos()">
 
             <div class="mb-3">
               <label for="" class="form-label">Dia de la reserva</label>
@@ -14,17 +14,18 @@
                 <label for="" class="form-label">Hora de la reserva</label>
                 <input required type="time" formControlName="hora" class="form-control" name="" id="" aria-describedby="helpId" >
             </div>
-
+            <fieldset disabled>
             <div class="mb-3">
                 <label for="" class="form-label">Id del campo</label>
-                <input required type="text" formControlName="idCAMPO" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Id del campo">
+                <input required type="text" formControlName="idcampo" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Id del campo">
             </div>
 
+            
             <div class="mb-3">
                 <label for="" class="form-label">Usuario</label>
-                <input required type="text" formControlName="usuario" class="form-control" name="" id="" aria-describedby="helpId" placeholder="usuario">
+                <input  required type="text" formControlName="usuario" class="form-control" name="" id="" aria-describedby="helpId" placeholder="usuario">
             </div>
-
+            </fieldset>
 
               <div class="btn-group" role="group" aria-label="">
                   <button type="submit" class="btn btn-success">Reservar</button>
