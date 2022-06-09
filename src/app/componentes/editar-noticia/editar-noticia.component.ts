@@ -41,6 +41,12 @@ export class EditarNoticiaComponent implements OnInit {
      }
 
   ngOnInit(): void {
+
+    if( sessionStorage.getItem("rol") != 'admin'){
+
+      console.log("no eres admin");
+      this.ruteador.navigateByUrl("/iniciarSesion");
+    }
   }
 
 

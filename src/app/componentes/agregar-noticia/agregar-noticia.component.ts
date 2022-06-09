@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormBuilder } from '@angular/forms';
 
-import { CamposServiceService } from 'src/app/servicios/campos-service.service';
+
 
 import { Router } from '@angular/router';
 import { NoticiasService } from 'src/app/servicios/noticias.service';
@@ -30,6 +30,12 @@ export class AgregarNoticiaComponent implements OnInit {
     }
 
   ngOnInit(): void {
+
+    if( sessionStorage.getItem("rol") != 'admin'){
+
+      console.log("no eres admin");
+      this.ruteador.navigateByUrl("/iniciarSesion");
+    }
   }
 
   enviarDatos():any{

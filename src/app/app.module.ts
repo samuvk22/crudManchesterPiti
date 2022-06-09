@@ -22,6 +22,7 @@ import { AgregarNoticiaComponent } from './componentes/agregar-noticia/agregar-n
 import { EditarNoticiaComponent } from './componentes/editar-noticia/editar-noticia.component';
 import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion.component';
 import { EditarPlantillaComponent } from './componentes/editar-plantilla/editar-plantilla.component';
+import { UnirmeComponent } from './componentes/unirme/unirme.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { EditarPlantillaComponent } from './componentes/editar-plantilla/editar-
     AgregarNoticiaComponent,
     EditarNoticiaComponent,
     InicioSesionComponent,
-    EditarPlantillaComponent
+    EditarPlantillaComponent,
+    UnirmeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,50 @@
+<section class="">
+    <div class="container ">
+        <div class="row justify-content-sm-center ">
+            <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+                <div class="text-center my-1">
+                    <img src="./assets/manchester_piti.png" alt="logo" width="200">
+                </div>
+                <div class="card shadow-lg bg-light border border-dark">
+                    <div class="card-body p-5">
+                        <h1 class="fs-4 card-title fw-bold mb-4 text-center">¿QUIERES UNIRTE?</h1>
+                        <form [formGroup]="formularioUnirme" (ngSubmit)="enviarDatos()" id="inicio" class="needs-validation" novalidate="" autocomplete="off">
+                            <div class="mb-3">
+                                <label class="mb-2 text-muted" for="email">Nombre</label>
+                                <input formControlName="nombre" id="Usuario" type="text" class="form-control" name="usuario" value="" required autofocus>
+                                
+                            </div>
+
+                            <div class="mb-3">
+                                
+                                <label class="text-muted" for="password">Correo Electrónico</label> 
+                                <input formControlName="correo" id="contra" type="text" class="form-control" name="password" required>
+                                
+                            </div>
+
+                            <div class="mb-3">
+                                
+                                <label class="text-muted" for="password">Elige tu posicion</label> 
+                                <select formControlName="posicion" class="form-select" aria-label="Default select example">
+                                    <option selected>Elige tu posicion</option>
+                                    <option value="Portero">Portero</option>
+                                    <option value="Defensa">Defensa</option>
+                                    <option value="Mediocentro">Mediocentro</option>
+                                    <option value="Delantero">Delantero</option>
+                                  </select>
+                                
+                            </div>
+                                <div class="d-flex flex-row justify-content-center">
+                                    <button type="submit" class=" btn btn-primary btn-lg">
+                                        Enviar solicitud
+                                    </button>
+                                </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>

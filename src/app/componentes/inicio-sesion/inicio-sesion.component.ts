@@ -17,10 +17,13 @@ export class InicioSesionComponent implements OnInit {
 
   formularioUsuarios:FormGroup;
 
+  formularioRegistro:FormGroup;
+
   usuarios:any;
   encontrado:any;
 
   constructor(public formulario:FormBuilder,
+    public formularioRe:FormBuilder,
     private inicioService:InicioSesionService,
     private ruteador:Router) { 
 
@@ -29,6 +32,12 @@ export class InicioSesionComponent implements OnInit {
         usuario:[''],
         contraseña:[''],
         tipo:['']
+      });
+
+      this.formularioRegistro = this.formularioRe.group({
+        usuario:[''],
+        contraseña:[''],
+        repiteContraseña:['']
       });
     }
 
@@ -79,12 +88,69 @@ export class InicioSesionComponent implements OnInit {
       window.location.href = "http://localhost:4200/";
       //this.ruteador.navigateByUrl('/inicio');
      }else{
+       alert("El usuario no existe");
       window.location.href = "http://localhost:4200/iniciarSesion";
       //this.ruteador.navigateByUrl('/iniciarSesion');
      }
 
       
     });
+
+    
+
+  }
+
+
+  enviarDatosRegistro():any{
+
+     console.log("pulsaste registro");
+    console.log(this.formularioRegistro.value);
+    var formulario = this.formularioRegistro.value;
+
+    if(formulario.contraseña != formulario.repiteContraseña){
+      alert("Las contraseñas no coinciden");
+    }else{
+
+
+      this.inicioService.ObtenerUsuarios().subscribe(respuesta=>{
+        
+        this.usuarios = respuesta; 
+        console.log(this.usuarios);
+
+        var encontrado = false;
+        
+        
+        for(var i = 0; i < this.usuarios.length && encontrado == false; i++){
+
+          if(this.usuarios[i].USUARIO == formulario.usuario){
+            encontrado = true;
+            
+          }
+
+          console.log(encontrado);
+        }
+          
+
+        if(encontrado == false){
+          
+          this.inicioService.AgregarUsuario(formulario).subscribe(respuesta=>{
+
+            alert("Usuario Registrado!!");
+
+            sessionStorage.setItem("sesion","OK");
+            sessionStorage.setItem("usuario",formulario.usuario);
+            sessionStorage.setItem("rol","usuario");
+            window.location.href = "http://localhost:4200/";
+          });
+
+        }else{
+          alert("El usuario ya existe");
+        }
+      
+      });
+    } 
+
+    
 
     
 

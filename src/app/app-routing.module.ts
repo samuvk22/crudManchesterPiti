@@ -10,12 +10,14 @@ import { AgregarNoticiaComponent } from './componentes/agregar-noticia/agregar-n
 import { ListarNoticiasComponent } from './componentes/listar-noticias/listar-noticias.component';
 import { EditarNoticiaComponent } from './componentes/editar-noticia/editar-noticia.component';
 import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion.component';
+import { UnirmeComponent } from './componentes/unirme/unirme.component';
 
 const routes: Routes = [
 
 
   {path: 'listar-campos', component: ListarCampoComponent},
   {path: 'agregar-campo', component: AgregarCampoComponent},
+  {path: 'unirme', component: UnirmeComponent},
   {path: 'editar-campo/:id', component: EditarCampoComponent},
   {path: 'listar-noticias', component: ListarNoticiasComponent},
   {path: 'agregar-noticia', component: AgregarNoticiaComponent},
