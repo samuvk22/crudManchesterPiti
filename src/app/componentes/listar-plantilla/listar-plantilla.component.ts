@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlantillaService } from 'src/app/servicios/plantilla.service';
 
 @Component({
   selector: 'app-listar-plantilla',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listar-plantilla.component.css']
 })
 export class ListarPlantillaComponent implements OnInit {
-
-  constructor() { }
+Jugadores:any;
+  constructor(
+    private plantillaService:PlantillaService
+  ) { }
 
   ngOnInit(): void {
+    this.plantillaService.ObtenerJugador().subscribe(respuesta=>{
+      console.log(respuesta);
+      this.Jugadores=respuesta;
+    });
   }
 
 }

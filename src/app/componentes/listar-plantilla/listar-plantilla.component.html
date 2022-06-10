@@ -16,16 +16,64 @@
 
 
     <div class="inner-content text-center">
-      <div class=" col-md-8">
+
+      <div class="col-md-8 row" *ngFor="let plantilla of Jugadores; let iControl = index">
+        <div class="card m-5" style="max-width: 300px;">
+          <div class="card-header">
+              POSICION 
+          </div>
+
+            <div class="text-center">
+              <div class="card-body">
+                <h3 class="card-text">{{plantilla.NUMERO}}</h3>
+                <h5 class="card-title">{{plantilla.NOMBRE}}</h5>
+                <p class="card-text">{{plantilla.APELLIDOS}}</p>
+              </div>
+            </div>
+            <div class="row text-center d-flex justify-content-center">
+            <button class="btn btn-primary col-4 m-1" routerLink="/editar-plantilla/">Editar</button>
+            <button class="btn btn-warning col-4 m-1">Borrar</button>
+          </div>
+       </div>
+  </div>
+
+
+
+
+
+
+
+        <!-- <div class="card m-5" >
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="./assets/mbappe.jpg" class="img-fluid rounded-start m-1" alt="..." >
+            </div>
+            <div class=" col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{plantilla.NOMBRE}}</h5>
+                <p class="card-text">{{plantilla.APELLIDOS}}</p>
+               
+              </div>
+              
+            </div>
+
+            <div class="card-footer d-flex justify-content-end">
+              <p class="card-text text-center">POSICION</p>
+          </div>
+          </div>
+      </div> -->
+        </div>
+    
+      <!-- <div class=" col-md-8">
         <div class="card-body">
           <h5 class="card-title"></h5>
           <p class="card-text"></p>
          
         </div>
         
-      </div>
+      </div> -->
       
-    </div><br><br><br><hr>
+   <br><br><br><hr>
 
       <h4>CUERPO TÉCNICO</h4><hr>
 
