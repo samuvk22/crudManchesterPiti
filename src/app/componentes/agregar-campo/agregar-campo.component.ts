@@ -14,6 +14,7 @@ export class AgregarCampoComponent implements OnInit {
 
 
    formularioCampos:FormGroup;
+   campos:any;
 
   constructor(public formulario:FormBuilder,
       private camposServiceService:CamposServiceService,
@@ -44,10 +45,37 @@ export class AgregarCampoComponent implements OnInit {
     console.log("Me pulsaste");
     console.log(this.formularioCampos.value);
 
-    this.camposServiceService.AgregarCampo(this.formularioCampos.value).subscribe(respuesta=>{
 
-      this.ruteador.navigateByUrl('/listar-campos');
+    this.camposServiceService.ObtenerCampos().subscribe(respuesta=>{
+
+      this.campos = respuesta;
+      
+
+
+      var encontrado = false;
+
+      for(var i = 0; i < this.campos.length;i++){
+
+        
+         if(this.formularioCampos.value.idcampo == this.campos[i].ID_CAMPO ){
+          encontrado = true;
+        } 
+
+      }
+
+      if(encontrado == true){
+        alert("El campo ya existe ya existe!!!!");
+        this.ruteador.navigateByUrl("/listar-campos");
+      }else{
+        this.camposServiceService.AgregarCampo(this.formularioCampos.value).subscribe(respuesta=>{
+          alert("El campo ha sido agregado con exito");
+          this.ruteador.navigateByUrl('/listar-campos');
+        });
+      }
+
     });
+
+    
 
     
 

@@ -16,6 +16,7 @@ import { NoticiasService } from 'src/app/servicios/noticias.service';
 export class AgregarNoticiaComponent implements OnInit {
 
   formularioNoticias:FormGroup;
+  noticias:any;
 
   constructor(public formulario:FormBuilder,
     private noticiasService:NoticiasService,
@@ -31,11 +32,12 @@ export class AgregarNoticiaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    /* if( sessionStorage.getItem("rol") != 'admin'){
+     if( sessionStorage.getItem("sesion") != 'OK'){
 
-      console.log("no eres admin");
+      alert("Para subir una noticia debes iniciar sesion!!!!");
       this.ruteador.navigateByUrl("/iniciarSesion");
-    } */
+     
+    } 
   }
 
   enviarDatos():any{
@@ -43,10 +45,36 @@ export class AgregarNoticiaComponent implements OnInit {
     console.log("Me pulsaste");
     console.log(this.formularioNoticias.value);
 
-    this.noticiasService.AgregarNoticia(this.formularioNoticias.value).subscribe(respuesta=>{
+    this.noticiasService.ObtenerNoticias().subscribe(respuesta=>{
 
-      this.ruteador.navigateByUrl('/listar-noticias');
+      this.noticias = respuesta;
+      
+
+
+      var encontrado = false;
+
+      for(var i = 0; i < this.noticias.length;i++){
+
+        
+         if(this.formularioNoticias.value.idcampo == this.noticias[i].ID_NOTICIA ){
+          encontrado = true;
+        } 
+
+      }
+
+      if(encontrado == true){
+        alert("La noticia ya existe!!!!");
+        this.ruteador.navigateByUrl("/listar-noticias");
+      }else{
+        this.noticiasService.AgregarNoticia(this.formularioNoticias.value).subscribe(respuesta=>{
+          alert("Noticia subida con exito!!!");
+          this.ruteador.navigateByUrl('/listar-noticias');
+        });
+      }
+
     });
+
+    
 
     
 

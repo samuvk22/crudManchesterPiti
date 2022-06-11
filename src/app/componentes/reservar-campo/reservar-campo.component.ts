@@ -16,6 +16,7 @@ export class ReservarCampoComponent implements OnInit {
 
   formularioReserva:FormGroup;
   elID:any;
+  reservas:any;
 
   constructor(private activeRoute:ActivatedRoute,
     private reservarService:ReservarService,
@@ -47,6 +48,13 @@ export class ReservarCampoComponent implements OnInit {
      }
 
   ngOnInit(): void {
+
+
+
+    if(sessionStorage.getItem("sesion") != "OK"){
+      alert("Para reservar debe iniciar sesion");
+      this.ruteador.navigateByUrl('/iniciarSesion');
+    }
   }
 
 
@@ -56,9 +64,43 @@ export class ReservarCampoComponent implements OnInit {
     console.log(this.formularioReserva.value);
 
 
-     this.reservarService.Reservar(this.elID,this.formularioReserva.value).subscribe(()=>{
-      this.ruteador.navigateByUrl('/listar-campos');
-    }); 
+    this.reservarService.ObtenerReservas().subscribe(respuesta=>{
+
+      this.reservas = respuesta;
+
+      var fechaHora = this.formularioReserva.value.fecha + " " + this.formularioReserva.value.hora + ":00.000000";
+
+      console.log(fechaHora);
+      
+
+
+      var encontrado = false;
+
+      for(var i = 0; i < this.reservas.length;i++){
+
+        console.log(this.reservas[i].HORA);
+        console.log(this.reservas[i].USUARIO);
+        console.log(this.reservas[i].ID_CAMPO);
+         if(this.formularioReserva.value.idcampo == this.reservas[i].ID_CAMPO && this.formularioReserva.value.usuario == this.reservas[i].USUARIO && fechaHora == this.reservas[i].HORA){
+          encontrado = true;
+        } 
+
+      }
+
+      if(encontrado == true){
+        alert("La reserva ya existe!!!!");
+        this.ruteador.navigateByUrl("/listar-campos");
+      }else{
+        this.reservarService.Reservar(this.elID,this.formularioReserva.value).subscribe(()=>{
+
+          alert("campo reservado con exito");
+          this.ruteador.navigateByUrl('/listar-campos');
+        }); 
+      }
+
+    });
+
+     
     
   }
 

@@ -26,4 +26,8 @@ export class ReservarService {
 
     return this.clienteHttp.post(this.API + "?reservar=" + id, datosReserva);
   }
+
+  ObtenerReservas(){
+    return this.clienteHttp.get(this.API);
+  }
 }
