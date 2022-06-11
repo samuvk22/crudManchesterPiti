@@ -19,4 +19,14 @@ Jugadores:any;
     });
   }
 
+  borrarRegistro(id:any, iControl:any){
+    console.log(id);
+    console.log(iControl);
+
+    this.plantillaService.BorrarJugador(id).subscribe((respuesta)=>{
+      this.Jugadores.splice(iControl,1);
+    });
+
+  }
+
 }

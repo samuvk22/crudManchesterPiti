@@ -20,4 +20,8 @@ export class PlantillaService {
     return this.clienteHttp.get(this.API);
   }
 
+  BorrarJugador(id:any):Observable<any>{
+    return this.clienteHttp.get(this.API+"?borrar=1", id);
+    }
+
 }
