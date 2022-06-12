@@ -24,6 +24,7 @@ import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion
 import { EditarPlantillaComponent } from './componentes/editar-plantilla/editar-plantilla.component';
 import { UnirmeComponent } from './componentes/unirme/unirme.component';
 import { ReservarCampoComponent } from './componentes/reservar-campo/reservar-campo.component';
+import { AgregarJugadorComponent } from './componentes/agregar-jugador/agregar-jugador.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ReservarCampoComponent } from './componentes/reservar-campo/reservar-ca
     InicioSesionComponent,
     EditarPlantillaComponent,
     UnirmeComponent,
-    ReservarCampoComponent
+    ReservarCampoComponent,
+    AgregarJugadorComponent
   ],
   imports: [
     BrowserModule,

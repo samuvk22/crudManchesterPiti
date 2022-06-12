@@ -7,26 +7,26 @@ import { PlantillaService } from 'src/app/servicios/plantilla.service';
   styleUrls: ['./listar-plantilla.component.css']
 })
 export class ListarPlantillaComponent implements OnInit {
-Jugadores:any;
+  Jugadores: any;
   constructor(
-    private plantillaService:PlantillaService
+    private plantillaService: PlantillaService
   ) { }
 
   ngOnInit(): void {
-    this.plantillaService.ObtenerJugador().subscribe(respuesta=>{
+    this.plantillaService.ObtenerJugador().subscribe(respuesta => {
       console.log(respuesta);
-      this.Jugadores=respuesta;
+      this.Jugadores = respuesta;
     });
   }
 
-  borrarRegistro(id:any, iControl:any){
+  borrarRegistro(id: any, iControl: any) {
     console.log(id);
     console.log(iControl);
-
-    this.plantillaService.BorrarJugador(id).subscribe((respuesta)=>{
-      this.Jugadores.splice(iControl,1);
-    });
-
+    if (window.confirm("¿Desea eliminar el jugador?")) {
+      this.plantillaService.BorrarJugador(id).subscribe((respuesta) => {
+        this.Jugadores.splice(iControl, 1);
+      });
+    }
   }
 
 }

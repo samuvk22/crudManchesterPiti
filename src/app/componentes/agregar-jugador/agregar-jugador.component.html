@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-header">
+    AGREGAR JUGADOR
+  </div>
+  <div class="card-body">
+
+        <form ngNativeValidate>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre</label>
+                <input required type="text" formControlName="direccion" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Apellidos</label>
+                <input required type="text" formControlName="tipo" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Apellidos">
+              </div>
+
+              <div class="mb-3">
+                <label for="" class="form-label">Dorsal</label>
+                <input required type="number" formControlName="tipo" class="form-control" name="" id="" aria-describedby="helpId" min="0" max="99" placeholder="Dorsal">
+              </div>
+
+
+              <div class="btn-group" role="group" aria-label="">
+                  <button type="submit" class="btn btn-success">Agregar</button>
+                  <button type="button" routerLink="/listar-campos" class="btn btn-danger">Cancelar</button>
+              </div>
+        </form>
+
+
+  </div>
+</div>
