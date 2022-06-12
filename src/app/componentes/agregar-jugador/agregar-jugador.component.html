@@ -4,21 +4,21 @@
   </div>
   <div class="card-body">
 
-        <form ngNativeValidate>
+        <form [formGroup]="formularioDeJugadores" (ngSubmit)="enviarDatos()">
 
             <div class="mb-3">
                 <label for="" class="form-label">Nombre</label>
-                <input required type="text" formControlName="direccion" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre">
+                <input required type="text" formControlName="nombre" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre">
             </div>
 
             <div class="mb-3">
                 <label for="" class="form-label">Apellidos</label>
-                <input required type="text" formControlName="tipo" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Apellidos">
+                <input required type="text" formControlName="apellidos" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Apellidos">
               </div>
 
               <div class="mb-3">
                 <label for="" class="form-label">Dorsal</label>
-                <input required type="number" formControlName="tipo" class="form-control" name="" id="" aria-describedby="helpId" min="0" max="99" placeholder="Dorsal">
+                <input required type="number" formControlName="dorsal" class="form-control" name="" id="" aria-describedby="helpId" min="0" max="99" placeholder="Dorsal">
               </div>
 
 
