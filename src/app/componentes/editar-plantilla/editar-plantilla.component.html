@@ -1,29 +1,40 @@
+<div class="module-content mt0">
+    <section class="mod-noticia mod-plantilla">
+      <header id="masthead" class="site-header" role="banner">
+        <h3 class="site-title"><strong>EDITAR PLANTILLA / MANCHESTER PITI FC </strong></h3>   
+  
+  
+  
+  <div class="title-bar"><div class="inner container">
+  
+  </div></div>
+  
+  </header><br><br>
+
 <div class="card">
-    <div class="card-header">
-        Editar Plantilla
-    </div>
+
     <div class="card-body">
-        <form (ngSubmit)="actualizarJugador()">
+        <form ngNativeValidate [formGroup]="formularioDeJugadores" (ngSubmit)="actualizarJugador()">
 
             <div class="mb-3">
               <label for="" class="form-label">Nombre</label>
-              <input type="text" formControlName="nombre" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre del campo">
+              <input required type="text" formControlName="nombre" class="form-control" formControlName="nombre" id="" aria-describedby="helpId">
             </div>
 
             <div class="mb-3">
                 <label for="" class="form-label">Apellidos</label>
-                <input type="text" formControlName="direccion" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Direccion">
+                <input required type="text" formControlName="direccion" class="form-control" formControlName="apellidos" id="" aria-describedby="helpId">
             </div>
 
             <div class="mb-3">
                 <label for="" class="form-label">Dorsal</label>
-                <input type="text" formControlName="tipo" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Tipo del campo">
+                <input required type="number" formControlName="tipo" class="form-control" name="" id="" formControlName="numero" aria-describedby="helpId">
               </div>
 
 
               <div class="btn-group" role="group" aria-label="">
-                  <button type="submit" class="btn btn-success">Agregar</button>
-                  <button type="button" routerLink="/listar-campos" class="btn btn-danger">Cancelar</button>
+                  <button type="submit" class="btn btn-success">Aceptar</button>
+                  <button type="button" routerLink="/listar-plantilla" class="btn btn-danger">Cancelar</button>
               </div>
          </form>
     </div>

@@ -16,12 +16,20 @@ export class PlantillaService {
   return this.clienteHttp.post(this.API+"?insertar=1", datosPlantilla);
   }
 
-  ObtenerJugador(){
+  ObtenerPlantilla(){
     return this.clienteHttp.get(this.API);
   }
 
   BorrarJugador(id:any):Observable<any>{
     return this.clienteHttp.get(this.API+"?borrar="+id);
+    }
+
+    ObtenerJugador(id:any):Observable<any>{
+      return this.clienteHttp.get(this.API+"?consultar="+id);
+    }
+
+    EditarJugador(id:any,datosPlantilla:any):Observable<any>{
+      return this.clienteHttp.post(this.API+"?actualizar="+id, datosPlantilla);
     }
 
 }

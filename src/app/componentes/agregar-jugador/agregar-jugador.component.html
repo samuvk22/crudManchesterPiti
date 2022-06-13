@@ -4,7 +4,7 @@
   </div>
   <div class="card-body">
 
-        <form [formGroup]="formularioDeJugadores" (ngSubmit)="enviarDatos()">
+        <form ngNativeValidate [formGroup]="formularioDeJugadores" (ngSubmit)="enviarDatos()">
 
             <div class="mb-3">
                 <label for="" class="form-label">Nombre</label>
@@ -18,13 +18,13 @@
 
               <div class="mb-3">
                 <label for="" class="form-label">Dorsal</label>
-                <input required type="number" formControlName="dorsal" class="form-control" name="" id="" aria-describedby="helpId" min="0" max="99" placeholder="Dorsal">
+                <input required type="number" formControlName="numero" class="form-control" name="" id="" aria-describedby="helpId" min="0" max="99" placeholder="Dorsal">
               </div>
 
 
               <div class="btn-group" role="group" aria-label="">
                   <button type="submit" class="btn btn-success">Agregar</button>
-                  <button type="button" routerLink="/listar-campos" class="btn btn-danger">Cancelar</button>
+                  <button type="button" routerLink="/listar-plantilla" class="btn btn-danger">Cancelar</button>
               </div>
         </form>
 

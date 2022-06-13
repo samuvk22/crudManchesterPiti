@@ -16,7 +16,7 @@ import { AgregarJugadorComponent } from './componentes/agregar-jugador/agregar-j
 import { EditarPlantillaComponent } from './componentes/editar-plantilla/editar-plantilla.component';
 
 const routes: Routes = [
-  {path: 'editar-plantilla/id', component: EditarPlantillaComponent},
+  {path: 'editar-plantilla/:id', component: EditarPlantillaComponent},
   {path: 'agregar-jugador', component: AgregarJugadorComponent},
   {path: 'listar-campos', component: ListarCampoComponent},
   {path: 'agregar-campo', component: AgregarCampoComponent},

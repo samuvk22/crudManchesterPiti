@@ -42,8 +42,7 @@
             </div>
             <div class="row text-center d-flex justify-content-center">
 
-
-            <a class="admin btn btn-secondary col-4 m-1" routerLink="/editar-plantilla/{{plantilla.ID_JUGADOR}}">Editar</a>
+            <button  id="admin" class="admin btn btn-secondary col-4 m-1" routerLink="/editar-plantilla/{{plantilla.ID_JUGADOR}}">Editar</button>
                     
             <button class=" admin btn btn-danger col-5 m-1" (click)="borrarRegistro(plantilla.ID_JUGADOR,iControl)" role="button">ELIMINAR</button>
 
