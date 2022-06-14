@@ -30,7 +30,8 @@ export class AppComponent {
       const ini = document.getElementById("ini");
       //ini.innerHTML = "hola";
       const noini = document.getElementById("noini");
-  
+      
+      const iniciado = document.getElementById("iniciado");
   
       if(sessionStorage.getItem("sesion") == "OK" ){
   
@@ -48,12 +49,20 @@ export class AppComponent {
           noini.style.display = "none";
   
         }
+
+        if(iniciado != null){
+          iniciado.style.display = "block";
+        }
        // window.location.reload();
     }else{
 
       if(noini != null){
         noini.style.display = "block";
   
+      }
+
+      if(iniciado != null){
+        iniciado.style.display = "none";
       }
     }
     

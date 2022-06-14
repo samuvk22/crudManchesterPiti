@@ -25,6 +25,8 @@ import { EditarPlantillaComponent } from './componentes/editar-plantilla/editar-
 import { UnirmeComponent } from './componentes/unirme/unirme.component';
 import { ReservarCampoComponent } from './componentes/reservar-campo/reservar-campo.component';
 import { AgregarJugadorComponent } from './componentes/agregar-jugador/agregar-jugador.component';
+import { MisReservasComponent } from './componentes/mis-reservas/mis-reservas.component';
+import { MisPublicacionesComponent } from './componentes/mis-publicaciones/mis-publicaciones.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { AgregarJugadorComponent } from './componentes/agregar-jugador/agregar-j
     EditarPlantillaComponent,
     UnirmeComponent,
     ReservarCampoComponent,
-    AgregarJugadorComponent
+    AgregarJugadorComponent,
+    MisReservasComponent,
+    MisPublicacionesComponent
   ],
   imports: [
     BrowserModule,

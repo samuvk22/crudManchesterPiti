@@ -104,10 +104,15 @@
             
           </ul>
           <div  class="d-flex me-4">
+            <div class="mt-3" id="iniciado">
+              <a class="text-dark text-decoration-none mx-3" routerLink="/mis-reservas">Mis reservas</a>
+              <a class="text-dark text-decoration-none mx-3" routerLink="/mis-publicaciones">Mis publicaciones</a>
+            </div>
             <a id="noini"  class="text-dark text-decoration-none" [routerLink]="['/iniciarSesion']">Haz click aquí si quieres registrarte o iniciar sesion</a>
             <a id="ini" style="display: none;"  class="text-dark text-decoration-none" (click)="cerrarSesion()">
               
             </a>
+            
           </div>
         </div>
       </div>
