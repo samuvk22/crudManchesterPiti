@@ -5,7 +5,7 @@ export class Noticia{
     titulo!:String;
     descripcion!:String;
     usuario!:String;
-
+    imagen!:String;
 
 
 }

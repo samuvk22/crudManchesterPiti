@@ -27,7 +27,8 @@ export class AgregarCampoComponent implements OnInit {
     this.formularioCampos = this.formulario.group({
       nombre:[''],
       direccion:[''],
-      tipo:['']
+      tipo:[''],
+      imagen:['']
     });
   }
 

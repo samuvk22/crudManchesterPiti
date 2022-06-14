@@ -19,9 +19,9 @@
         </div>
         <div class="col-md-6 col-lg-4 mt-5" *ngFor="let campo of Campos; let iControl = index">
             <!-- Bootstrap 5 card box -->
-            <div class="card-box text-center">
+            <div class="card-box text-center h-100">
                 <div class="card-thumbnail">
-                    <img src="./assets/wilfredagbonavbare.jpg" class="img-fluid" alt="">
+                    <img src={{campo.imagen}} class="card-img-top" height="300" width="400" alt="">
                 </div>
                 <h3 class="mt-2">{{campo.NOMBRE}}</h3>
                 <p class="text-secondary">{{campo.DIRECCION}}</p>

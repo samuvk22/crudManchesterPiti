@@ -3,7 +3,7 @@
         Agregar Campo
     </div>
     <div class="card-body">
-        <form ngNativeValidate [formGroup]="formularioCampos" (ngSubmit)="enviarDatos()">
+        <form ngNativeValidate [formGroup]="formularioCampos" (ngSubmit)="enviarDatos()" enctype="multipart/form-data">
 
             <div class="mb-3">
               <label for="" class="form-label">Nombre</label>
@@ -18,8 +18,12 @@
             <div class="mb-3">
                 <label for="" class="form-label">Tipo</label>
                 <input required type="text" formControlName="tipo" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Tipo del campo">
-              </div>
+            </div>
 
+            <div class="mb-3">
+                <label for="" class="form-label">Imagen</label><br>
+                <input required type="file" name="archivosubido" formControlName="imagen">
+            </div>
 
               <div class="btn-group" role="group" aria-label="">
                   <button type="submit" class="btn btn-success">Agregar</button>

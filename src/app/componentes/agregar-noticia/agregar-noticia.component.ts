@@ -23,11 +23,23 @@ export class AgregarNoticiaComponent implements OnInit {
     private ruteador:Router) { 
 
 
+
+      
+
       this.formularioNoticias = this.formulario.group({
         titulo:[''],
         descripcion:[''],
-        usuario:['']
+        usuario:[''],
+        imagen:['']
       });
+
+      this.formularioNoticias.setValue({
+        titulo:'',
+        descripcion:'',
+        usuario:sessionStorage.getItem("usuario"),
+        imagen:''
+      });
+      
     }
 
   ngOnInit(): void {
@@ -37,7 +49,7 @@ export class AgregarNoticiaComponent implements OnInit {
       alert("Para subir una noticia debes iniciar sesion!!!!");
       this.ruteador.navigateByUrl("/iniciarSesion");
      
-    } 
+    }
   }
 
   enviarDatos():any{
