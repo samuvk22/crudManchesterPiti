@@ -49,5 +49,11 @@ export class NoticiasService {
     return this.clienteHttp.post(this.API + "?actualizar=" + id, datosNoticia);
   }
 
+  ObtenerMisNoticias():Observable<any>{
+
+
+    return this.clienteHttp.get(this.API + "?obtener="+ sessionStorage.getItem("usuario"));
+  }
+
 
 }

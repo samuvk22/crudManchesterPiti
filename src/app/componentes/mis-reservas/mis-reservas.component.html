@@ -1,1 +1,32 @@
-<p>mis-reservas works!</p>
+<div class="container-fluid">
+
+    <div class="row">   
+        <div class="col-12 d-flex justify-content-center">
+            <h1 class="">Mis Reservas</h1>
+            
+        </div>
+        
+            <div class="card m-5" *ngFor="let miReserva of misReservas; let iControl = index">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src={{miReserva.imagen}} class="img-fluid rounded-start m-1" alt="..." >
+                  </div>
+                  <div class=" col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Reserva </h5>
+                      <p class="card-text">Campo: {{miReserva.NOMBRE}}</p>
+                      <p class="card-text">Fecha y hora de la reserva: {{miReserva.HORA}}</p>
+                      <button class=" admin btn btn-danger mt-2 mx-2 btn-sm" (click)="borrarRegistro(miReserva.ID_RESERVA,iControl)"  role="button">Cancelar reserva</button>
+                    </div>
+                    
+                  </div>
+                  
+                  
+                  
+                </div>
+            </div>
+            
+        </div>
+</div>
+
+

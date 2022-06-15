@@ -30,4 +30,19 @@ export class ReservarService {
   ObtenerReservas(){
     return this.clienteHttp.get(this.API);
   }
+
+
+  ObtenerMisReservas():Observable<any>{
+
+
+    return this.clienteHttp.get(this.API + "?obtener="+ sessionStorage.getItem("usuario"));
+  }
+
+
+  BorrarReserva(id:any):Observable<any>{
+
+
+    return this.clienteHttp.get(this.API + "?borrar="+ id);
+  }
+
 }

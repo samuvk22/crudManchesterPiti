@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { CamposServiceService } from 'src/app/servicios/campos-service.service';
 
+
 @Component({
   selector: 'app-listar-campo',
   templateUrl: './listar-campo.component.html',
@@ -20,6 +21,7 @@ export class ListarCampoComponent implements OnInit {
   ngOnInit(): void {
 
 
+    
 
     this.camposServiceService.ObtenerCampos().subscribe(respuesta=>{
 

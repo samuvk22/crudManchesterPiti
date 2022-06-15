@@ -14,6 +14,8 @@ import { UnirmeComponent } from './componentes/unirme/unirme.component';
 import { ReservarCampoComponent } from './componentes/reservar-campo/reservar-campo.component';
 import { AgregarJugadorComponent } from './componentes/agregar-jugador/agregar-jugador.component';
 import { EditarPlantillaComponent } from './componentes/editar-plantilla/editar-plantilla.component';
+import { MisReservasComponent } from './componentes/mis-reservas/mis-reservas.component';
+import { MisPublicacionesComponent } from './componentes/mis-publicaciones/mis-publicaciones.component';
 
 const routes: Routes = [
   {path: 'editar-plantilla/:id', component: EditarPlantillaComponent},
@@ -25,6 +27,8 @@ const routes: Routes = [
   {path: 'reservar-campo/:id', component: ReservarCampoComponent},
   {path: 'listar-noticias', component: ListarNoticiasComponent},
   {path: 'agregar-noticia', component: AgregarNoticiaComponent},
+  {path: 'mis-reservas', component: MisReservasComponent},
+  {path: 'mis-publicaciones', component: MisPublicacionesComponent},
   {path: 'editar-noticia/:id', component: EditarNoticiaComponent},
   {path: 'listar-plantilla', component: ListarPlantillaComponent},
   {path: 'iniciarSesion', component: InicioSesionComponent},

@@ -21,6 +21,18 @@
                 <input required type="number" formControlName="numero" class="form-control" name="" id="" aria-describedby="helpId" min="0" max="99" placeholder="Dorsal">
               </div>
 
+              <div class="mb-3">
+                                
+                <label class="text-muted" for="password">Elige tu posicion</label> 
+                <select formControlName="posicion" class="form-select" aria-label="Default select example">
+                    <option selected>Elige tu posicion</option>
+                    <option value="Portero">Portero</option>
+                    <option value="Defensa">Defensa</option>
+                    <option value="Mediocentro">Mediocentro</option>
+                    <option value="Delantero">Delantero</option>
+                  </select>
+                
+            </div>
 
               <div class="btn-group" role="group" aria-label="">
                   <button type="submit" class="btn btn-success">Agregar</button>

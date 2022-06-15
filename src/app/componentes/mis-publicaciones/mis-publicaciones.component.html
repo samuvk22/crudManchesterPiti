@@ -1,1 +1,29 @@
-<p>mis-publicaciones works!</p>
+<div class="container-fluid">
+
+    <div class="row">   
+        <div class="col-12 d-flex justify-content-center">
+            <h1 class="">Mis Publicaciones</h1>
+            
+        </div>
+        
+            <div class="card m-5" *ngFor="let miNoticia of misNoticias; let iControl = index">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src={{miNoticia.imagen}} class="img-fluid rounded-start m-1" alt="..." >
+                  </div>
+                  <div class=" col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">{{miNoticia.TITULO}} </h5>
+                      <p class="card-text">{{miNoticia.DESCRIPCION}}</p>
+                      <button class=" admin btn btn-danger mt-2 mx-2 btn-sm" (click)="borrarRegistro(miNoticia.ID_NOTICIA,iControl)"  role="button">Eliminar mi noticia</button>
+                    </div>
+                    
+                  </div>
+                  
+                  
+                  
+                </div>
+            </div>
+            
+        </div>
+</div>

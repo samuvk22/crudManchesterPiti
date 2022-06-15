@@ -30,13 +30,13 @@
       <div class="col-4" *ngFor="let plantilla of Jugadores; let iControl = index">
         <div class="card m-5" style="max-width: 300px;">
           <div class="card-header">
-              POSICION 
+              {{plantilla.nombreposicion}} 
           </div>
 
             <div class="text-center">
               <div class="card-body">
                 <h3 class="card-text">{{plantilla.NUMERO}}</h3>
-                <h5 class="card-title">{{plantilla.NOMBRE}}</h5>
+                <h5 class="card-title">{{plantilla.nombrejugador}}</h5>
                 <p class="card-text">{{plantilla.APELLIDOS}}</p>
               </div>
             </div>
